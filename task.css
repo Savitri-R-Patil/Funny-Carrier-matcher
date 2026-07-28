@@ -1,0 +1,335 @@
+/* === Editorial Retro Typography & Clean Layout Stylesheet === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* Classic editorial typewriter font */
+}
+
+body {
+    background-color: #121212; /* Deep dark background */
+    background-image: radial-gradient(#222222 15%, transparent 16%);
+    background-size: 12px 12px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: flex;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Bold, High-Contrast Editorial Typography */
+h1, h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #ff453a; /* Sharp retro offset shadow effect */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a1a1aa;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.welcome-tag {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ff453a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0px #ffffff;
+}
+
+.welcome-sub {
+    font-size: 0.9rem;
+    color: #71717a;
+    font-style: italic;
+    margin-bottom: 35px;
+    letter-spacing: 0.3px;
+}
+
+/* High-Contrast Retro Buttons */
+button {
+    background: #ff453a;
+    border: 3px solid #ff453a;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    color: #121212;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 0px #ffffff;
+}
+
+button:hover {
+    transform: translate(-2px, -2px);
+    background: #ffffff;
+    color: #ff453a;
+    box-shadow: 7px 7px 0px #ff453a;
+}
+
+/* Input Groups & Clean Elements */
+.input-group {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 350px; 
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #ff453a;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input and Select Dropdown Menu Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 0px;
+    border: 3px solid #3f3f46;
+    background-color: #09090b;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    box-shadow: inset 3px 3px 0px rgba(0,0,0,0.8);
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ff453a;
+    box-shadow: 0 0 10px rgba(255, 69, 58, 0.4), inset 3px 3px 0px rgba(0,0,0,0.8);
+}
+
+/* ── Exam Button Grid ── */
+.exam-group {
+    max-width: 520px !important;
+}
+
+.exam-btn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.exam-btn {
+    background: #18181b;
+    border: 2px solid #3f3f46;
+    padding: 12px 8px;
+    font-size: 0.85rem;
+    color: #a1a1aa;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.exam-btn:hover {
+    background: #27272a;
+    color: #ffffff;
+    border-color: #ff453a;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #ff453a;
+}
+
+.exam-btn.selected {
+    background: #ff453a;
+    color: #121212;
+    border-color: #ff453a;
+    box-shadow: 5px 5px 0px #ffffff;
+    transform: translate(-2px, -2px);
+}
+
+.exam-btn.selected:hover {
+    background: #ffffff;
+    color: #ff453a;
+    box-shadow: 7px 7px 0px #ff453a;
+}
+
+/* Custom Scrollbar for the page */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #09090b;
+    border-left: 2px solid #3f3f46;
+}
+::-webkit-scrollbar-thumb {
+    background: #ff453a;
+    border: 2px solid #09090b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+/* Loading Bar */
+.progress-container {
+    width: 80%;
+    max-width: 400px;
+    height: 18px;
+    background-color: #09090b;
+    border: 3px solid #3f3f46;
+    border-radius: 0px;
+    margin: 20px 0;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.9);
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff453a, #ff6b6b);
+    transition: width 0.3s ease;
+}
+
+/* Result Card Layout (Centered, No Image) */
+.result-layout {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers text horizontally */
+    justify-content: center;
+    text-align: center;
+    background-color: #18181b;
+    padding: 60px 40px;
+    border-radius: 0px;
+    box-shadow: 12px 12px 0px rgba(255, 69, 58, 0.2);
+    border: 3px solid #ff453a;
+    max-width: 700px;
+    width: 100%;
+    animation: slideUp 0.8s ease-out;
+}
+
+.result-layout p {
+    color: #d4d4d8;
+    margin-bottom: 20px;
+}
+
+.result-title {
+    color: #ff453a;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.career-match {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 35px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #ff453a;
+    line-height: 1.1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+}
+
+/* ── Confetti Celebration ── */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -20px;
+    width: 12px;
+    height: 18px;
+    opacity: 0.9;
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(25vh) translateX(calc(var(--sway, 50px) * 0.5)) rotate(180deg) scale(0.95);
+    }
+    50% {
+        transform: translateY(50vh) translateX(var(--sway, 50px)) rotate(360deg) scale(0.8);
+    }
+    75% {
+        transform: translateY(75vh) translateX(calc(var(--sway, 50px) * 0.3)) rotate(540deg) scale(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(110vh) translateX(0) rotate(720deg) scale(0.2);
+        opacity: 0;
+    }
+}
