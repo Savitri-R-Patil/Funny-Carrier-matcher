@@ -1,6 +1,4 @@
-/* === JavaScript Logic for Career Match Predictor === */
 
-// Desi Roast & Comedy Style Career Database (CarryMinati, Samay Raina, & Kapil Sharma Vibe)
 const careerDatabase = {
     "Banking": [
         "Hidden Cashback hunter",
