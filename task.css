@@ -1,4 +1,4 @@
-/* css structure */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -80,6 +80,24 @@ p {
     font-style: italic;
     margin-bottom: 35px;
     letter-spacing: 0.3px;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
 }
 
 /* High-Contrast Retro Buttons */
@@ -196,23 +214,7 @@ input[type="text"]:focus {
     box-shadow: 7px 7px 0px #ff453a;
 }
 
-/* Custom Scrollbar for the page */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #09090b;
-    border-left: 2px solid #3f3f46;
-}
-::-webkit-scrollbar-thumb {
-    background: #ff453a;
-    border: 2px solid #09090b;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
-}
 
-/* Loading Bar */
 .progress-container {
     width: 80%;
     max-width: 400px;
@@ -232,11 +234,11 @@ input[type="text"]:focus {
     transition: width 0.3s ease;
 }
 
-/* Result Card Layout (Centered, No Image) */
+
 .result-layout {
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center;    /* Centers text horizontally */
+    flex-direction: column; 
+    align-items: center;   
     justify-content: center;
     text-align: center;
     background-color: #18181b;
@@ -273,26 +275,8 @@ input[type="text"]:focus {
     line-height: 1.1;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20% { transform: translateX(-8px); }
-    40% { transform: translateX(8px); }
-    60% { transform: translateX(-6px); }
-    80% { transform: translateX(6px); }
-}
-
-/* ── Confetti Celebration ── */
 #confetti-container {
     position: fixed;
     top: 0;
